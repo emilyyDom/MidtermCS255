@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<style>
+/*changing default font of document*/
+html {
+    font:
+        1.2em/1.4 Serif,
+        Georgia,
+        Comic;
+}
+/*changing main document spacing and background color*/
+body{
+    padding: 0 0 1em;
+    background-color: rgba(137, 157, 149, 0.635);
+}
+/*changing color, background color and border for the nav and top of screen*/
+header {
+    background-color: #333;
+    color: #fff;
+    border: 2px solid rgb(105, 115, 99);
+}
+/*resetting formats to be designed another way from normal list*/
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/* changing color, display type, font, border, spacing, etc*/
+header a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 0.5em 1em;
+    border-top: 1px solid #999;
+    font-family: monospace;
+}
+/*changing font, size, weight, making it italic, spacing, etc*/
+header .title {
+    font-size: 100%;
+    font-style: italic;
+    font-weight: bold;
+    padding: 1em;
+    font-family: Verdana;
+}
+/*resetting formatting so I can design in another way than just normal bullet list*/
+.cards {
+    list-style: none;
+    margin: 0;
+    margin-top: 30px;
+    padding: 0;
+}
+/*border color, moving text down and expanding the height*/
+.cards li {
+    border: 5px solid var(--blue);
+    margin-bottom: 5em;
+    height: 100%;
+}
+#mini{
+font-size: 12px;
+font-style: italic;
+font-family: Tahoma;
+}
+#intro{
+font-size:22px
+}
+/*spacing image to be bigger, combining two columns*/
+#second{
+    border: none;
+    margin-right: 40px;
+    grid-column: span 2;
+}
+/*changes to the titles include: color, background color, spacing and spacing inside the elements*/
+.cards h2 {
+    color: rgb(43, 42, 42);
+    margin: 0;
+    padding: 0.5em 1em 0 1em;
+    font-family: monospace;
+}
+/*spacing inside element*/
+.cards .inner {
+    padding: 0.5em 1em;
+}
+/*spacing*/
+.cards div{
+    margin: 15px;
+    margin-right: 150px;
+    margin-top: 0px;
+}
+/* changes picture size */
+#ppimg{
+    height: 515px;
+}
+
+
+.cardsS{
+    list-style: none;
+    margin: 0;
+    margin-top: 30px;
+    text-align: left;
+    padding: 0;
+    justify-content: space-around;
+}
+.cardsS li{
+    border: 3px solid white;
+    margin-bottom: 1em;
+    height: 100%;
+    flex-basis: 20%;
+}
+/*changes to the titles include: color, background color, spacing and spacing inside the elements*/
+.cardsS h2 {
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+    padding: 0.5em 1em;
+}
+/*spacing inside element*/
+.cardsS .inner {
+    padding: 0.5em 1em;
+}
+/*spacing*/
+.cardsS div{
+    margin: 15px;
+   
+}
+
+.facts{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.facts li{
+    border: 3px solid white;
+    margin: 7px;
+    height: 100%;
+    flex-basis: 20%;
+}
+.facts h4{
+    margin: 0;
+    text-align: center;
+}
+/*resizing image*/
+#catimg{
+    display: flex;
+    height: 45px
+}
+/*General grid format for footer*/
+#footer{
+    display:grid;
+    grid-template-columns: 150px 600px 50px;
+    align-items: center;
+    font-size: small;
+}
+/*expanding column*/
+#text{
+grid-column: 1 / span 2;
+
+}
+/*changing color, decoration*/
+address{
+    color: black;
+    text-decoration: none;
+}
+/*changing rows, color, and font size*/
+#copyright{
+grid-row: 3;
+grid-column: 2;
+color: gray;
+font-size: 10px;
+}
+
+
+
+@media(min-width:601px){
+    header {
+        display: flex;
+        /* separate the nav and title */
+        justify-content: space-between;
+        align-items: center;
+    }
+    header ul {
+        display: flex;
+        /* mav navigation display using flexbox */
+    }
+    header li {
+        margin: 0;
+        /* remove the margin used in the mobile design */
+    }
+    .cards {
+        display: flex;
+        /* a one column layout for the cards */
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .cardsS {
+        display: flex;;
+        /* a four column layout for the cards */
+        margin-left: none;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+        /*General grid format for footer*/
+        #footer{
+            grid-template-columns: 500px 700px 500px;
+            align-items: center;
+            font-size: small;
+        }
+} 
+
+
+</style>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>About Me</title>
+    </head>
+    <header>
+        <div class="title">My Website</div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="midtermProject.html">Home</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="AboutMe.html">About Me</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <body>
+        <ul class="cards">
+            <li>
+                <h2>About-Me</h2>
+                <div>
+                    <p id="mini">Who am i? well what do you want to know.</p>
+                    <p id="intro">
+                        Lorem ipsum odor amet, consectetuer adipiscing elit. Commodo suscipit conubia fringilla aptent convallis; ligula at nascetur. 
+                        Maximus potenti venenatis quisque pretium sit porttitor elementum. Lorem ipsum odor amet, consectetuer adipiscing elit. Commodo suscipit conubia fringilla aptent convallis; ligula at nascetur. 
+                        Maximus potenti venenatis quisque pretium sit porttitor elementum.
+                        <br> <br>
+                        Lorem ipsum odor amet, consectetuer adipiscing elit. Lorem ipsum odor amet, consectetuer adipiscing elit. 
+                        Malesuada euismod suspendisse ultrices potenti, rutrum vestibulum bibendum massa. Iaculis pharetra pellentesque tortor commodo potenti nostra ac.
+                
+                    </p>
+                </div>
+            </li>
+            <li id="second">
+                <img id="ppimg" src="catppImage.jpg" alt="Profile Pictures">
+            </li>
+        </ul>
+
+        <h3>Skills</h3>
+        <hr style="height: 2px; border-width: 0; background-color: black;">
+
+        <ul class="cardsS">
+            <li>
+                <div>
+                    <p class="skillcards">
+                        <h4>Languages</h4>
+                        <hr style="height: 1px; border-width: 0; background-color: black;">
+                        Finibus pretium sodales platea scelerisque netus nascetur mi pellentesque? Convallis fusce nulla scelerisque viverra mauris.
+                    </p>
+                </div>
+            
+            </li>
+            <li>
+                <div>
+                    <p class="skillcards">
+                        <h4>Experience</h4>                    
+                        <hr style="height: 1px; border-width: 0; background-color: black;">
+                        Lorem ipsum odor amet, consectetuer adipiscing elit.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p class="skillcards">
+                    <h4>Education</h4>
+                        <hr style="height: 1px; border-width: 0; background-color: black;">
+                        Placerat eros at penatibus ac rhoncus tortor conubia cras etiam.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p class="skillcards">
+                    <h4>Databases</h4>
+                        <hr style="height: 1px; border-width: 0; background-color: black;">
+                        Natoque nisi aptent finibus in fames, commodo id dis.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p class="skillcards">
+                        <h4>Others</h4>
+                        <hr style="height: 1px; border-width: 0; background-color: black;">
+                        Finibus pretium sodales platea scelerisque netus nascetur mi pellentesque? Convallis fusce nulla scelerisque viverra mauris.
+                    </p>
+                </div>
+            
+            </li>
+        </ul>
+        <br> <br> <br> <br> <br> <br> <br> <br>
+
+        <h3>Fun-facts</h3>
+        <hr style="height: 2px; border-width: 0; background-color: black;">
+        <ul class="facts">
+            <li>
+                 <h4>I love cats</h4>
+            </li>
+            <li>
+                <h4>kitty cats are scared of cucumbers</h4>                    
+            </li>
+            <li>
+                <h4>I am cat</h4>
+            </li>
+            <li>
+                <h4>Cats are the most perfect animal</h4>
+            </li>
+            <li>
+                <h4>Cat is me</h4>
+            </li>
+            <li>
+                <h4>something</h4>
+            </li>
+            <li>
+                <h4>Cats are corn-hash</h4>
+            </li>
+            <li>
+               <h4>Cats have 100s of bones in their ears and can move them up to 180 degrees</h4>
+            </li>
+        </ul>
+
+        <foot>
+            <hr  style="height: 6px; border-width: 0; background-color: White;">
+            <div id="footer">
+                <p id="name">Emily</p>
+                <address><a href= "emdombro@svsu.edu">emdombro@svsu.edu</a></address>
+                <p id="media">Media</p>
+                <p id="text">website and personal computer & IT developer and cat lover lol</p>
+                <a href="https://youtu.be/mzPBJ0SDcCY" id="youtube"><img id="catimg" src="catImage.jpg" alt="Social Media Link"> </a>
+                <br>
+                <br>
+                <p id="copyright">Copyright 2024. Made by Emily</p>
+            </div>
+        </foot>
+    </body>
+
+
+
+
+</html>
