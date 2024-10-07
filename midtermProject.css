@@ -1,0 +1,256 @@
+:root{ /* making css variable for background color*/
+    --blue: #356b65;
+}
+/*changing default font of document*/
+html {
+    font:
+        1.2em/1.4 Serif,
+        Georgia,
+        Comic;
+}
+/*changing main document spacing and background color*/
+body{
+    padding: 0 0 1em;
+    background-color: rgba(137, 157, 149, 0.635);
+}
+/*changing color, background color and border for the nav and top of screen*/
+header {
+    background-color: #333;
+    color: #fff;
+    border: 2px solid rgb(105, 115, 99);
+}
+/*resetting formats to be designed another way from normal list*/
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/* changing color, display type, font, border, spacing, etc*/
+header a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 0.5em 1em;
+    border-top: 1px solid #999;
+    font-family: monospace;
+}
+/*changing font, size, weight, making it italic, spacing, etc*/
+header .title {
+    font-size: 100%;
+    font-style: italic;
+    font-weight: bold;
+    padding: 1em;
+    font-family: Verdana;
+}
+
+/*resetting formatting so I can design in another way than just normal bullet list*/
+.cards {
+    list-style: none;
+    margin: 0;
+    margin-top: 30px;
+    padding: 0;
+}
+/*border color, moving text down and expanding the height*/
+.cards li {
+    border: 5px solid var(--blue);
+    margin-bottom: 1em;
+    height: 100%;
+}
+
+.cardsS{
+    list-style: none;
+    margin: 0;
+    margin-top: 30px;
+    text-align: left;
+    padding: 0;
+}
+.cardsS li{
+    border: 3px solid white;
+    margin-bottom: 1em;
+    height: 100%;
+}
+/*changes to the titles include: color, background color, spacing and spacing inside the elements*/
+.cardsS h2 {
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+    padding: 0.5em 1em;
+}
+/*spacing inside element*/
+.cardsS .inner {
+    padding: 0.5em 1em;
+}
+/*spacing*/
+.cardsS div{
+    margin: 15px;
+   
+}
+
+
+/*spacing image to be bigger, combining two columns*/
+#second{
+    border: none;
+    grid-column: span 2;
+}
+/*changes to the titles include: color, background color, spacing and spacing inside the elements*/
+.cards h2 {
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+    padding: 0.5em 1em;
+}
+/*spacing inside element*/
+.cards .inner {
+    padding: 0.5em 1em;
+}
+/*spacing*/
+.cards div{
+    margin: 15px;
+   
+}
+/* changes picture size */
+#frontimg{
+    height: 515px;
+}
+/* changes picture size */
+#loopimg{
+    height:220px;
+    margin: 2px;
+}
+/* changes font & size between elements*/
+#intro{
+    font-size: 22px;
+    margin: 15px;
+}
+/* changes font */
+.projectcards p{
+    font-size: 18px;
+}
+/* changes font & size*/
+h4{
+    font-size: 25px;
+    margin: 10px;
+}
+/* changes font & size*/
+h2{
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma;
+}
+#aboutme{
+    flex-direction: column;
+    display: flex;
+    width: 40%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+/*changes effected to the buttons under projects ONLY right two buttons.*/
+/*changes position, moving them up and below and the spacing in between.*/
+.botbutt{
+    display: flex;
+   margin: 10px;
+   margin: auto;
+   margin-bottom: 10px;
+}
+/*changing the button to show color, border curve, color & thickness, made buttons thickers also.*/
+button{
+    background-color: rgba(137, 157, 149, 0.635);
+    border-radius: 10px;
+    border-style: dashed;
+    border-color: #3b8b82;
+    display: block;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+/*changing the blockquote to show different color, obaque, border color & style, width, etc.*/
+.quote{
+    display: flex;
+    background-color: rgba(182, 142, 129, 0.35);
+    border-radius: 20px;
+    border-color: var(--blue);
+    border-style: groove;
+    border-width: 15px;
+    font-family: 'Noto Sans';
+    padding: 20px 30px 20px;
+    width: 35%;
+}
+.ifs{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+   
+}
+/*change to font and the text size*/
+h3{
+font-size: 25px;
+font-family: monospace;
+}
+/*resizing image*/
+#catimg{
+    display: flex;
+    height: 45px
+}
+/*General grid format for footer*/
+#footer{
+    display:grid;
+    grid-template-columns: 150px 600px 50px;
+    align-items: center;
+    font-size: small;
+}
+/*expanding column*/
+#text{
+grid-column: 1 / span 2;
+}
+/*changing color, decoration*/
+address{
+    color: black;
+    text-decoration: none;
+}
+/*changing rows, color, and font size*/
+#copyright{
+grid-row: 3;
+grid-column: 2;
+color: gray;
+font-size: 10px;
+}
+
+@media(min-width:601px){
+    header {
+        display: flex;
+        /* separate the nav and title */
+        justify-content: space-between;
+        align-items: center;
+    }
+    header ul {
+        display: flex;
+        /* mav navigation display using flexbox */
+    }
+    header li {
+        margin: 0;
+        /* remove the margin used in the mobile design */
+    }
+    .cards {
+        display: flex;
+        /* a one column layout for the cards */
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .cardsS {
+        display: flex;;
+        /* a four column layout for the cards */
+        margin-left: none;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+        /*General grid format for footer*/
+        #footer{
+            grid-template-columns: 500px 700px 500px;
+            align-items: center;
+            font-size: small;
+        }
+} 
+
+   
+
+
+
+
