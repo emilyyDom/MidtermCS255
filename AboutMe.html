@@ -169,29 +169,34 @@ color: gray;
 font-size: 10px;
 }
 
+/*making website responsive based on width size. Everything inside this query is if the screen size (width) is less than 1024px*/
 
-
-@media(min-width:601px){
+@media(min-width:1024px){
+    /*changing header to be flex, and moving content to be center*/
     header {
         display: flex;
         /* separate the nav and title */
         justify-content: space-between;
         align-items: center;
     }
+    /*changing the elements inside the nav*/
     header ul {
         display: flex;
         /* mav navigation display using flexbox */
     }
+    /*removing extra space with each element for nav*/
     header li {
         margin: 0;
         /* remove the margin used in the mobile design */
     }
+    /*remove columns for sections*/
     .cards {
         display: flex;
         /* a one column layout for the cards */
         grid-template-columns: 1fr;
         gap: 20px;
     }
+    /*remove columns for sections*/
     .cardsS {
         display: flex;;
         /* a four column layout for the cards */
@@ -199,13 +204,23 @@ font-size: 10px;
         grid-template-columns: 1fr;
         gap: 20px;
     }
-        /*General grid format for footer*/
+    /*updating to moble design*/
+    .ifs{
+        display: flex;
+    }
+    /*updating to moble design*/
+    #aboutme{
+        display: flex;
+    }
+        /*General grid format for footer for mobile design*/
         #footer{
             grid-template-columns: 500px 700px 500px;
             align-items: center;
             font-size: small;
         }
 } 
+  
+
 
 
 </style>
@@ -213,18 +228,24 @@ font-size: 10px;
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <!-- adding title for tab name -->
         <title>About Me</title>
     </head>
+    <!-- navigation menu -->
     <header>
+        <!-- Main text on nav bar -->
         <div class="title">My Website</div>
         <nav>
+            <!-- two options to choose -->
             <ul>
                 <li>
+                    <!-- linking main page -->
                     <a href="midtermProject.html">Home</a>
                 </li>
             </ul>
             <ul>
                 <li>
+                    <!-- linking second page (this code) -->
                     <a href="AboutMe.html">About Me</a>
                 </li>
             </ul>
@@ -232,10 +253,14 @@ font-size: 10px;
     </header>
     <body>
         <ul class="cards">
+            <!-- first column with text -->
             <li>
+                <!-- header for the first section -->
                 <h2>About-Me</h2>
                 <div>
+                    <!-- small comment/text to make website look more alike -->
                     <p id="mini">Who am i? well what do you want to know.</p>
+                    <!-- filler text for section -->
                     <p id="intro">
                         Lorem ipsum odor amet, consectetuer adipiscing elit. Commodo suscipit conubia fringilla aptent convallis; ligula at nascetur. 
                         Maximus potenti venenatis quisque pretium sit porttitor elementum. Lorem ipsum odor amet, consectetuer adipiscing elit. Commodo suscipit conubia fringilla aptent convallis; ligula at nascetur. 
@@ -247,68 +272,92 @@ font-size: 10px;
                     </p>
                 </div>
             </li>
+            <!-- adding image to the second column -->
             <li id="second">
                 <img id="ppimg" src="catppImage.jpg" alt="Profile Pictures">
             </li>
         </ul>
-
+        <!-- different section header -->
         <h3>Skills</h3>
+        <!-- styled line -->  
         <hr style="height: 2px; border-width: 0; background-color: black;">
-
         <ul class="cardsS">
+            <!-- 1 section out of 5 -->
             <li>
                 <div>
                     <p class="skillcards">
+                        <!-- section header -->
                         <h4>Languages</h4>
+                        <!-- styled line -->  
                         <hr style="height: 1px; border-width: 0; background-color: black;">
+                        <!-- filler text -->
                         Finibus pretium sodales platea scelerisque netus nascetur mi pellentesque? Convallis fusce nulla scelerisque viverra mauris.
                     </p>
                 </div>
-            
             </li>
+            <!-- 2 section out of 5 -->
             <li>
                 <div>
                     <p class="skillcards">
-                        <h4>Experience</h4>                    
+                        <!-- section header -->
+                        <h4>Experience</h4>  
+                        <!-- styled line -->                    
                         <hr style="height: 1px; border-width: 0; background-color: black;">
+                        <!-- filler text -->
                         Lorem ipsum odor amet, consectetuer adipiscing elit.
                     </p>
                 </div>
             </li>
+            <!-- 3 section out of 5 -->
             <li>
                 <div>
                     <p class="skillcards">
+                        <!-- section header -->
                     <h4>Education</h4>
+                        <!-- styled line -->  
                         <hr style="height: 1px; border-width: 0; background-color: black;">
+                        <!-- filler text -->
                         Placerat eros at penatibus ac rhoncus tortor conubia cras etiam.
                     </p>
                 </div>
             </li>
+            <!-- 4 section out of 5 -->
             <li>
                 <div>
                     <p class="skillcards">
+                        <!-- section header -->
                     <h4>Databases</h4>
+                        <!-- styled line -->  
                         <hr style="height: 1px; border-width: 0; background-color: black;">
+                        <!-- filler text -->  
                         Natoque nisi aptent finibus in fames, commodo id dis.
                     </p>
                 </div>
             </li>
+            <!-- 5 section out of 5 -->
             <li>
                 <div>
                     <p class="skillcards">
+                        <!-- section header -->
                         <h4>Others</h4>
+                        <!-- styled line -->  
                         <hr style="height: 1px; border-width: 0; background-color: black;">
+                        <!-- filler text -->
                         Finibus pretium sodales platea scelerisque netus nascetur mi pellentesque? Convallis fusce nulla scelerisque viverra mauris.
                     </p>
                 </div>
             
             </li>
         </ul>
+        <!-- spacing between -->
         <br> <br> <br> <br> <br> <br> <br> <br>
-
+        <!-- different section header -->
         <h3>Fun-facts</h3>
+        <!-- styled line -->  
         <hr style="height: 2px; border-width: 0; background-color: black;">
         <ul class="facts">
+            <!-- each section involes bolded filler text -->
+             <!-- sectioned independant since styled seperate -->
             <li>
                  <h4>I love cats</h4>
             </li>
@@ -336,15 +385,22 @@ font-size: 10px;
         </ul>
 
         <foot>
+            <!-- styled line -->  
             <hr  style="height: 6px; border-width: 0; background-color: White;">
             <div id="footer">
+                <!-- name -->
                 <p id="name">Emily</p>
+                <!-- email address -->
                 <address><a href= "emdombro@svsu.edu">emdombro@svsu.edu</a></address>
+                <!-- header for clickable links -->
                 <p id="media">Media</p>
+                <!-- filler content/text/ info -->
                 <p id="text">website and personal computer & IT developer and cat lover lol</p>
+                <!-- img/icon that is a clickable link -->
                 <a href="https://youtu.be/mzPBJ0SDcCY" id="youtube"><img id="catimg" src="catImage.jpg" alt="Social Media Link"> </a>
                 <br>
                 <br>
+                <!-- copyright text for legal pursert -->
                 <p id="copyright">Copyright 2024. Made by Emily</p>
             </div>
         </foot>
